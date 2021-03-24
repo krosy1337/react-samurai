@@ -1,0 +1,19 @@
+.main {
+	grid-area: main;
+
+	display: grid;
+
+	grid-template-columns: 1fr minmax(auto, 200px) minmax(auto, 1000px) 1fr;
+
+	grid-template-areas: '. side content .';
+
+	grid-column-gap: 10px;
+}
+
+@media (max-width: 640px) {
+	.main {
+		display: block;
+
+		padding: 0 5px;
+	}
+}

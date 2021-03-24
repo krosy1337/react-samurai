@@ -1,0 +1,31 @@
+.sidebar {
+	grid-area: side;
+
+	background: linear-gradient(90deg, rgba(131,194,255,1) 0%, rgba(184,143,255,1) 100%);
+
+	border-radius: 10px 0 0 10px;
+
+	&__list {
+		list-style: none;
+
+		padding: 15px;
+
+		margin: 0;
+	}
+
+	&__link {
+		color: #fff;
+
+		font-size: 25px;
+
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 640px) {
+	.sidebar {
+		margin-bottom: 20px;
+
+		border-radius: 10px;
+	}
+}

@@ -1,10 +1,11 @@
 import React from 'react'
 import Sidebar from "./Sidebar";
 import Profile from "./Profile";
+import classes from './Main.module.scss'
 
 function Main() {
 	return (
-		<main className="main">
+		<main className={classes.main}>
 			<Sidebar />
 			<Profile />
 		</main>

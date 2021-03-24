@@ -1,0 +1,14 @@
+.header {
+	grid-area: header;
+
+	background: linear-gradient(90deg, rgba(255,131,131,1) 0%, rgba(255,214,143,1) 100%);
+
+	&__logo {
+		max-width: 100px;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+	}
+}

@@ -1,11 +1,13 @@
 import React from 'react'
 import logo from "../logo.svg";
+import classes from './Header.module.scss'
 
 function Header() {
+	console.log(classes)
 	return(
-		<header className="header">
-			<div className="container header__container">
-				<img src={logo} alt="logo" className="header__logo"/>
+		<header className={classes.header}>
+			<div className={`${classes.header__container} container`}>
+				<img src={logo} alt="logo" className={classes.header__logo}/>
 			</div>
 		</header>
 	)
