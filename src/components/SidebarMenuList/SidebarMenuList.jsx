@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './Sidebar.module.scss'
+import classes from '../Sidebar/Sidebar.module.scss'
 
 function SidebarList() {
 	return(
