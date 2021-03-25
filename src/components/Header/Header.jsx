@@ -3,7 +3,6 @@ import logo from "../../logo.svg";
 import classes from './Header.module.scss'
 
 function Header() {
-	console.log(classes)
 	return(
 		<header className={classes.header}>
 			<div className={`${classes.header__container} container`}>

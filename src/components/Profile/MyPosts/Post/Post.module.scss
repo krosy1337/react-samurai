@@ -4,8 +4,34 @@
 	border-radius: 10px;
 
 	padding: 10px;
+
 }
 
 .post + .post {
 	margin-top: 20px;
 }
+
+.userInfo {
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 10px;
+}
+
+.avatar {
+	width: 50px;
+	height: 50px;
+
+	border-radius: 50%;
+
+	background-color: #459b7d;
+
+	margin-right: 10px;
+
+	flex-shrink: 0;
+}
+
+.name {
+	font-size: 18px;
+}
+

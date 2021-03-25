@@ -4,9 +4,9 @@ import MyPosts from "./MyPosts/MyPosts";
 
 function Profile() {
 	return(
-		<section className={classes.content}>
-			<div className={`${classes.content__imageContainer} ${classes.content__imageContainer_big}`}>
-				<img src="https://wallpaperboat.com/wp-content/uploads/2020/06/05/44094/scenery-17.jpg" alt="someimage" className={classes.content__image}/>
+		<section>
+			<div className={`${classes.imageContainer} ${classes.imageContainer_big}`}>
+				<img src="https://wallpaperboat.com/wp-content/uploads/2020/06/05/44094/scenery-17.jpg" alt="someimage" className={classes.image}/>
 			</div>
 			<MyPosts />
 		</section>
