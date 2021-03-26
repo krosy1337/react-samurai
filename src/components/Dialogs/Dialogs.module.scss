@@ -1,0 +1,63 @@
+.content {
+	display: flex;
+}
+
+.dialogs {
+	flex: 0 1 20%;
+
+	margin-right: 20px;
+
+	background-color: #fff;
+
+	border-radius: 10px;
+
+	padding: 10px;
+}
+
+.chat {
+	background-color: #fff;
+
+	border-radius: 10px;
+
+	padding: 10px;
+
+	flex-grow: 1;
+
+	display: flex;
+}
+
+.list {
+	li + li {
+		margin-top: 20px;
+	}
+}
+
+.dialog {
+	padding: 5px;
+
+	background-color: #f5f5f5;
+
+	border-radius: 5px;
+
+	display: flex;
+	align-items: center;
+
+	&__avatar {
+		width: 40px;
+		height: 40px;
+
+		border-radius: 50%;
+
+		background-color: #2d5c75;
+
+		margin-right: 10px;
+	}
+
+	&__name {
+		font-size: 18px;
+	}
+}
+
+.messages {
+	align-self: flex-end;
+}
