@@ -42,6 +42,8 @@
 	display: flex;
 	align-items: center;
 
+	text-decoration: none;
+
 	&__avatar {
 		width: 40px;
 		height: 40px;
@@ -55,6 +57,8 @@
 
 	&__name {
 		font-size: 18px;
+
+		color: #000;
 	}
 }
 

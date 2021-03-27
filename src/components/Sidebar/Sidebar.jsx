@@ -1,5 +1,5 @@
 import React from 'react'
-import SidebarList from "../SidebarMenuList/SidebarMenuList";
+import SidebarList from "./SidebarMenuList/SidebarMenuList";
 import classes from './Sidebar.module.scss'
 
 

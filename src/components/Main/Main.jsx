@@ -9,14 +9,17 @@ import News from "../News/News"
 import Music from "../Music/Music"
 import Settings from "../Settings/Settings"
 
-function Main() {
+function Main(props) {
 	return (
 		<BrowserRouter>
 			<main className={classes.main}>
 				<Sidebar />
 				<div className={classes.content}>
-					<Route path='/profile' component={Profile}/>
-					<Route path='/dialogs' component={Dialogs}/>
+					<Route path='/profile' render={() => <Profile posts={props.posts}/>} />
+					<Route path='/dialogs' render={() => <Dialogs
+						dialogs={props.dialogs}
+						messages={props.messages}
+					/>}/>
 					<Route path='/news' component={News}/>
 					<Route path='/music' component={Music}/>
 					<Route path='/settings' component={Settings}/>
