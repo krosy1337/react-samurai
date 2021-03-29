@@ -1,15 +1,38 @@
 import React from 'react'
-import classes from '../Sidebar.module.scss'
+import classes from './SidebarMenuList.module.scss'
 import {NavLink} from "react-router-dom";
 
-function SidebarList() {
+function SidebarList(props) {
 	return(
-		<ul className={classes.sidebar__list}>
-			<li><NavLink to="/profile" className={classes.sidebar__link} activeClassName={classes.active}>Профиль</NavLink></li>
-			<li><NavLink to="/dialogs" className={classes.sidebar__link} activeClassName={classes.active}>Сообщения</NavLink></li>
-			<li><NavLink to="/news" className={classes.sidebar__link} activeClassName={classes.active}>Новости</NavLink></li>
-			<li><NavLink to="/music" className={classes.sidebar__link} activeClassName={classes.active}>Музыка</NavLink></li>
-			<li><NavLink to="/settings" className={classes.sidebar__link} activeClassName={classes.active}>Настройки</NavLink></li>
+		<ul className={classes.list}>
+			{props.links.map(link => {
+				return(
+				<li>
+					<NavLink to={link.url}
+							 className={classes.link}
+							 activeClassName={classes.active}>
+						{link.text}
+					</NavLink>
+				</li>
+				)
+			})}
+			<li>
+				<NavLink to="/friends" className={`${classes.title} ${classes.link}`} activeClassName={classes.active}>Друзья</NavLink>
+				<div className={classes.friends}>
+					<div className={classes.friend}>
+						<div className={classes.avatar}></div>
+						<span className={classes.name}>Слон</span>
+					</div>
+					<div className={classes.friend}>
+						<div className={classes.avatar}></div>
+						<span className={classes.name}>Балон</span>
+					</div>
+					<div className={classes.friend}>
+						<div className={classes.avatar}></div>
+						<span className={classes.name}>Рулон</span>
+					</div>
+				</div>
+			</li>
 		</ul>
 	)
 }

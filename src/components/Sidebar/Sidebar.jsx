@@ -3,11 +3,11 @@ import SidebarList from "./SidebarMenuList/SidebarMenuList";
 import classes from './Sidebar.module.scss'
 
 
-function Sidebar() {
+function Sidebar(props) {
 	return(
 		<aside className={classes.sidebar}>
 			<nav className="sidebar__nav">
-				<SidebarList />
+				<SidebarList links={props.state.sidebarList}/>
 			</nav>
 		</aside>
 	)

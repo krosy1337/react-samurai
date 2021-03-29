@@ -13,16 +13,15 @@ function Main(props) {
 	return (
 		<BrowserRouter>
 			<main className={classes.main}>
-				<Sidebar />
+				<Sidebar state={props.state.sidebar}/>
 				<div className={classes.content}>
-					<Route path='/profile' render={() => <Profile posts={props.posts}/>} />
-					<Route path='/dialogs' render={() => <Dialogs
-						dialogs={props.dialogs}
-						messages={props.messages}
-					/>}/>
-					<Route path='/news' component={News}/>
-					<Route path='/music' component={Music}/>
-					<Route path='/settings' component={Settings}/>
+					<Route path='/profile' render={() => <Profile state={props.state.profile}
+																  dispatch={props.dispatch}/>} />
+					<Route path='/dialogs' render={() => <Dialogs state={props.state.dialogs}
+																  dispatch={props.dispatch}/>}/>
+					<Route path='/news' render={() => <News />}/>
+					<Route path='/music' render={() => <Music />}/>
+					<Route path='/settings' render={() => <Settings />}/>
 				</div>
 			</main>
 		</BrowserRouter>

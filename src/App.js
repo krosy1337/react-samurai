@@ -7,7 +7,7 @@ function App(props) {
 	return (
 		<div className="app-wrapper">
 			<Header />
-			<Main posts={props.posts} dialogs={props.dialogs} messages={props.messages}/>
+			<Main state={props.state} dispatch={props.dispatch}/>
 		</div>
 	);
 }

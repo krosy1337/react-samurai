@@ -1,0 +1,29 @@
+.dialog {
+	padding: 5px;
+
+	background-color: #f5f5f5;
+
+	border-radius: 5px;
+
+	display: flex;
+	align-items: center;
+
+	text-decoration: none;
+}
+
+.avatar {
+	width: 40px;
+	height: 40px;
+
+	border-radius: 50%;
+
+	background-color: #2d5c75;
+
+	margin-right: 10px;
+}
+
+.name {
+	font-size: 18px;
+
+	color: #000;
+}
