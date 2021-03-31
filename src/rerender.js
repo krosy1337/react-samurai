@@ -1,5 +1,5 @@
 
-import {addPost, changeInput} from "./redux/state";
+import {addPost, changeInput} from "./redux/store";
 
 
 

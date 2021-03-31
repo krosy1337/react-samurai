@@ -1,10 +1,6 @@
 import React from 'react'
 import classes from './NewPost.module.scss'
-import {addPostActionCreate, changeNewPostValueActionCreate} from "../../../redux/state";
-
-
-
-
+import {addPostActionCreate, changeNewPostValueActionCreate} from "../../../redux/profile-reducer";
 
 function NewPost(props) {
 

@@ -1,8 +1,6 @@
-const ADD_POST = 'ADD-POST'
-const CHANGE_NEW_POST_VALUE = 'CHANGE-NEW-POST-VALUE'
-
-const ADD_MESSAGE = 'ADD-MESSAGE'
-const CHANGE_NEW_MESSAGE_VALUE = 'CHANGE-NEW-MESSAGE-VALUE'
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
+import sidebarReducer from "./sidebar-reducer";
 
 let store = {
 	_state: {
@@ -58,53 +56,14 @@ let store = {
 	},
 
 	dispatch(action) {
-		if (action.type === ADD_POST) {
-			let newPost = {
-				id: 4,
-				text: this._state.profile.newPostValue,
-			}
 
-			this._state.profile.posts.push(newPost)
-			this._state.profile.newPostValue = ''
+		this._state.profile = profileReducer(this._state.profile, action)
+		this._state.dialogs = dialogsReducer(this._state.dialogs, action)
+		this._state.sidebar = sidebarReducer(this._state.sidebar, action)
 
-			this._rerender(this._state)
-		} else if (action.type === CHANGE_NEW_POST_VALUE) {
-			this._state.profile.newPostValue = action.text
+		this._rerender(this._state)
 
-			this._rerender(this._state)
-		} else if (action.type === ADD_MESSAGE) {
-
-			let newMessage = {
-				id: 4,
-				text: this._state.dialogs.newMessageValue,
-				self: true,
-			}
-
-			this._state.dialogs.messages.push(newMessage)
-			this._state.dialogs.newMessageValue = ''
-
-			this._rerender(this._state)
-
-		} else if (action.type === CHANGE_NEW_MESSAGE_VALUE) {
-			this._state.dialogs.newMessageValue = action.text
-
-			this._rerender(this._state)
-		}
 	},
-}
-
-export function addPostActionCreate() {
-	return { type: ADD_POST }
-}
-export function changeNewPostValueActionCreate(text) {
-	return { type: CHANGE_NEW_POST_VALUE, text: text }
-}
-
-export function addMessageActionCreate() {
-	return { type: ADD_MESSAGE }
-}
-export function changeNewMessageValueActionCreate(text) {
-	return { type: CHANGE_NEW_MESSAGE_VALUE, text: text }
 }
 
 export default store
